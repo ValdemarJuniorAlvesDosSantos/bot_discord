@@ -2,7 +2,7 @@ const fs = require('fs');
 const { OpusEncoder } = require('@discordjs/opus');
 const { Readable } = require('stream');
 const Discord = require('discord.js');
-
+const prefix = process.env.PREFIX;
 
 
 const SILENCE_FRAME = Buffer.from([0xF8, 0xFF, 0xFE]);
@@ -18,7 +18,7 @@ module.exports = {
 	name: 'ouvir',
 	description: 'Ouve alguém',
 	args_length:0,
-	usage: '!ouvir',
+	help: `${prefix}ouvir`,
 	async execute(message , args) {
 		
   

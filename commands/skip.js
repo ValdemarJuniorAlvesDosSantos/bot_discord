@@ -1,9 +1,10 @@
 const {handlePlaySong } = require("../utils/handlePlaySong");
+const prefix = process.env.PREFIX;
 module.exports = {
 	name: 'skip',
 	description: 'Pula a música',
 	args_length:0,
-	help: '!skip',
+	help: `${prefix}skip`,
 	execute(message, args) {
         client = message.client
         let queue = client.queues.get(message.member.guild.id);

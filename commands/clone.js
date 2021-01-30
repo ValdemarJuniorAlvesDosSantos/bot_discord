@@ -1,10 +1,11 @@
 const Discord = require('discord.js');
 const Canvas = require('canvas');
+const prefix = process.env.PREFIX;
 module.exports = {
 	name: 'clone',
 	description: 'Cria um clone das sobras do usuário',
 	args_length:0,
-	help: '!clone',
+	help: `${prefix}clone`,
 	async execute(message, args) {
 		
 		// message.client.user.setUsername(message.author.username);

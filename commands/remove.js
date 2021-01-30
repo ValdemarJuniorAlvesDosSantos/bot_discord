@@ -1,4 +1,5 @@
 const handlePlaylist = require("../utils/handlePlaylist").handlePlaylist;
+const prefix = process.env.PREFIX;
 function handleRemoveItems(message, removeItens){
 	const client = message.client
 	let queue = client.queues.get(message.member.guild.id);
@@ -13,14 +14,14 @@ function handleRemoveItems(message, removeItens){
 }
 module.exports = {
 	name: 'remove',
-	description: 'Pula a música',
+	description: 'Remove músicas da playlist',
 	args_length:0,
-	help: '!skip',
+	help: `${prefix}remove ou ${prefix}remove <item1> <item2> ...`,
 	async execute(message, args) {
 		const client = message.client
 		let queue = client.queues.get(message.member.guild.id);
 		if (!queue){
-
+			message.channel.send("Sem música tocando no momento");
 			return;
 		}
 		if (args[0]){

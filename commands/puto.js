@@ -1,10 +1,10 @@
 const {removeAccents } = require("../utils/removeAccents");
-
+const prefix = process.env.PREFIX;
 module.exports = {
 	name: 'puto',
 	description: 'Calcula o quão puto o cara tá',
 	args_length :1,
-	usage: '!puto <nome>',
+	help: `${prefix}puto nome`,
 	execute(message, args) {
 		d = Math.random()*100;
 		nome = removeAccents(args[0]).toLowerCase();

@@ -33,14 +33,9 @@ client.on('message', message => {
     
     if (!client.commands.has(commandName)) return;
     const command = client.commands.get(commandName);
-    if (commandName === "play"){
-        command.execute(message, args,client);
         
-        return;
-    }
-    
     if (args.length < command.args_length){
-        console.log(args.length + " " + command.args_length );
+        message.reply("Falta de argumentos\n O commando deve ser usado da seguinte forma -> "+command.help);
         return;
     }
     try {

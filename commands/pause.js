@@ -1,8 +1,9 @@
+const prefix = process.env.PREFIX;
 module.exports = {
 	name: 'pause',
 	description: 'Pausa a musica',
 	args_length:0,
-	usage: '!pause',
+	help: `${prefix}pause`,
 	execute(message, args) {
         client = message.client
         let queue = client.queues.get(message.member.guild.id);
