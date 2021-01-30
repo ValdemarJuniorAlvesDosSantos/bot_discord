@@ -21,7 +21,7 @@ module.exports = {
 		
     	setTimeout(async ()=>{
 			
-			guildMemberBot.setNickname("FirstBot");
+			guildMemberBot.setNickname("FirstBotS2");
 			const canvas = Canvas.createCanvas(1000,834);
 			const ctx = canvas.getContext('2d');
 			const background = await Canvas.loadImage('./assets/clone_image.jpg');
